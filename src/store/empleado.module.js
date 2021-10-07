@@ -67,7 +67,7 @@ const actions = {
     },
     async [REGISTRAR_EMPLEADO](context, datos){
         return new Promise(resolve => {
-            ApiService.post('/api/Empleados', datos)
+            ApiService.post('/api/Empleados/', datos)
                 .then(({ data }) => {
                     context.commit(SET_EMPLEADO, data.data);
                     resolve(data)
@@ -82,7 +82,7 @@ const actions = {
         let id = datos.id;
         
         return new Promise(resolve => {
-            ApiService.update(`apiconsume/update/${id}?endpoint=api/Indicadores/UpdateIndicador/`, datos)
+            ApiService.update(`/api/Empleados/Update/${id}`, datos)
                 .then(({ data }) => {
                     context.commit(SET_EMPLEADO, data.data);
                     resolve(data)

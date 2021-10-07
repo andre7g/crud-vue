@@ -396,7 +396,7 @@
 import validations from "@/utils/validations.js";
 
 import { SET_BREADCRUMB } from "@/store/breadcrumbs.module";
-import { OBTENER_EMPLEADOS,REGISTRAR_EMPLEADO,OBTENER_EMPLEADO } from "@/store/empleado.module";
+import { OBTENER_EMPLEADOS,REGISTRAR_EMPLEADO,OBTENER_EMPLEADO,ACTUALIZAR_EMPLEADO } from "@/store/empleado.module";
 import { OBTENER_PUESTOS } from "@/store/puestos.module";
 import { OBTENER_DEPARTAMENTOS } from "@/store/departamentos.module";
 //import { OBTENER_PAISES } from "@/core/services/store/pais.module";
@@ -557,7 +557,7 @@ export default {
 
             } else {
                 this.$store
-                    .dispatch(ACTUALIZAR_DEPARTAMENTO, this.datosEmpleado)
+                    .dispatch(ACTUALIZAR_EMPLEADO, this.datosEmpleado)
                     .then(res => {
                         //console.log(res)
                         if(res.status===200){

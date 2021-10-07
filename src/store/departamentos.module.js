@@ -20,7 +20,6 @@ const getters = {
 
 const actions = {
     /**
-     * Obtener clientes (todos o por estado (activo, incativo, etc))
      * @param {} context 
      * @param {*} estadoId 
      * @returns 
